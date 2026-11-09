@@ -3,12 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3000",
+    "dev:ml": "cd ../../ML && ../../.venv/bin/uvicorn api_server:app --host 0.0.0.0 --port 8000",
     "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "start": "next start -p 3000",
+    "lint": "eslint",
+    "compile:data": "../../.venv/bin/python scripts/compile_datasets.py",
+    "seed:supabase": "../../.venv/bin/python scripts/seed_supabase.py"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.119.0",
+    "lucide-react": "^1.70.0",
     "next": "16.4.5",
     "react": "19.3.0",
     "react-dom": "19.3.0"
