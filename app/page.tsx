@@ -135,15 +135,13 @@ export default function HomeSpkPage() {
   const handleRemoveDeckCardInstance = (cardId: string) => {
     const idx = deckCardIds.indexOf(cardId);
     if (idx === -1) return;
-    const copy = [...deckCardIds];
-    copy.splice(idx, 1);
-    setCustomDeckCardIds(copy);
+    setCustomDeckCardIds(deckCardIds.filter((_, i) => i !== idx));
   };
 
   const handleSelectSlotCard = (slotIndex: number, cardId: string | null) => {
-    const next = [...rewardSlots];
-    next[slotIndex] = cardId;
-    setCustomRewardSlots(next);
+    setCustomRewardSlots(
+      rewardSlots.map((existing, idx) => (idx === slotIndex ? cardId : existing))
+    );
   };
 
   const canEvaluate = rewardSlots.every((id) => Boolean(id));

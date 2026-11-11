@@ -7,9 +7,6 @@ import type {
   Relic,
 } from "@/lib/types";
 
-/**
- * Single Source of Truth (SSoT) Constants mirroring ML/config/dsw_constants.py & ML/WP-DSW.ipynb
- */
 export const BASE_WEIGHTS = {
   C1_cost: 3.0,
   C2_offensive: 4.0,
@@ -259,10 +256,6 @@ function calculateKeywordOverlap(cardKeywords: string[], deckKeywords: string[])
   return Number((overlap / cardSet.size).toFixed(4));
 }
 
-/**
- * Mesin Inferensi Hibrida Dynamic State Weighting (DSW) + Weighted Product (WP)
- * 100% selaras dengan ML/WP-DSW.ipynb (Aturan R-01 s.d. R-08, Vektor S & V, dan Skip Threshold theta = 1.20).
- */
 export function evaluateCardRewards(
   payload: GameStateRequest,
   cardsById: Map<string, Card>,

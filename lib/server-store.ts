@@ -33,7 +33,6 @@ function readLocalStore(): LocalRuntimeStore {
       return JSON.parse(raw) as LocalRuntimeStore;
     }
   } catch {
-    // Fallback ke objek kosong apabila berkas belum ada atau korup
   }
   return { users: [], run_histories: [] };
 }
@@ -43,7 +42,6 @@ function writeLocalStore(store: LocalRuntimeStore): void {
     fs.mkdirSync(path.dirname(RUNTIME_STORE_PATH), { recursive: true });
     fs.writeFileSync(RUNTIME_STORE_PATH, JSON.stringify(store, null, 2), "utf-8");
   } catch {
-    // Abaikan jika filesystem read-only (misal serverless deployment dengan Supabase aktif)
   }
 }
 

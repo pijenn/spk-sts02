@@ -21,10 +21,6 @@ const RARITY_BADGE_STYLES: Record<string, string> = {
   Event: "border-cyan-500/40 bg-cyan-500/15 text-cyan-300",
 };
 
-/**
- * RelicGridItem (PRD 03 Bagian 3.2.C & 3.2.D):
- * Merender ikon relic 64x64 (.webp), nama relic, lencana rarity_key, dan potongan pendek description_clean.
- */
 export const RelicGridItem = React.memo(function RelicGridItem({
   relic,
   onSelect,

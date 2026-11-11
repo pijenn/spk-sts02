@@ -22,11 +22,6 @@ const TAG_CLASS_MAP: Record<string, string> = {
 const TOKEN_REGEX =
   /(\[(?:gold|red|blue|green|purple|orange|aqua|b|i)\]|\[\/(?:gold|red|blue|green|purple|orange|aqua|b|i)\]|\[energy:\d+\]|\[star:\d+\])/gi;
 
-/**
- * Parser Tag BBCode Spire Codex (<RichDescription />)
- * Sesuai PRD 03 Bagian 3.2.E: Mengonversi [gold], [red], [blue], [green], [purple],
- * [orange], [aqua], [b], [i], [energy:N], [star:N], serta baris baru (\n).
- */
 export function RichDescription({ text, className = "" }: RichDescriptionProps) {
   if (!text) return null;
 

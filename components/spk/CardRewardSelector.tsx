@@ -59,7 +59,6 @@ export function CardRewardSelector({
 
   return (
     <section className="space-y-6">
-      {/* Top Bar Navigasi & Banner Judul */}
       <div className="flex flex-col items-center">
         <div className="w-full flex flex-wrap items-center justify-between gap-3 mb-2">
           <button
@@ -93,7 +92,6 @@ export function CardRewardSelector({
           </div>
         </div>
 
-        {/* Ribbon Banner */}
         <div className="relative flex items-center justify-center w-full max-w-xl h-20 sm:h-24 select-none">
           <Image
             unoptimized
@@ -112,8 +110,6 @@ export function CardRewardSelector({
           Masukkan 3 pilihan kartu hadiah yang muncul di layar permainanmu
         </p>
       </div>
-
-      {/* 3 Slot Kartu Hadiah */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
         {[0, 1, 2].map((slotIdx) => {
           const selectedId = rewardSlots[slotIdx];
@@ -189,7 +185,6 @@ export function CardRewardSelector({
                     {card.cost === -1 ? "X" : card.cost ?? 0}
                   </p>
 
-                  {/* Ringkasan Kekuatan Kartu dalam Bahasa Manusia */}
                   <div className="mt-3 grid grid-cols-3 gap-1.5 w-full">
                     <div className="rounded-xl border-2 border-[#0e161b] bg-[#2a1d20] py-1 px-2 text-xs font-bold text-red-200">
                       ⚔️ Serang: {card.c2_offensive}/5
@@ -202,7 +197,6 @@ export function CardRewardSelector({
                     </div>
                   </div>
 
-                  {/* Tags Keywords */}
                   {card.keywords.length > 0 && (
                     <div className="mt-2.5 flex flex-wrap justify-center gap-1.5">
                       {card.keywords.map((kw) => (
@@ -266,7 +260,6 @@ export function CardRewardSelector({
         })}
       </div>
 
-      {/* Tombol "Proses Hasil" */}
       <div className="flex flex-col items-center justify-center pt-2">
         <button
           type="button"
@@ -292,7 +285,6 @@ export function CardRewardSelector({
         )}
       </div>
 
-      {/* Modal Pemilih Kartu Hadiah */}
       {activePickerSlot !== null && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"

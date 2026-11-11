@@ -18,6 +18,34 @@ import { resolveAssetUrl } from "@/lib/asset-url";
 import { humanizeRuleText, humanizeTacticalReason } from "@/lib/dsw-wp-engine";
 import type { Card, RecommendationResponse } from "@/lib/types";
 
+const WEIGHT_BAR_ITEMS = [
+  {
+    key: "w1_cost" as const,
+    label: "⚡ Hemat Energi Kartu",
+    color: "bg-amber-400",
+  },
+  {
+    key: "w2_offensive" as const,
+    label: "⚔️ Kekuatan Serangan",
+    color: "bg-red-500",
+  },
+  {
+    key: "w3_defensive" as const,
+    label: "🛡️ Kekuatan Pertahanan (Block)",
+    color: "bg-sky-400",
+  },
+  {
+    key: "w4_rarity" as const,
+    label: "💎 Kelangkaan Kartu",
+    color: "bg-purple-400",
+  },
+  {
+    key: "w5_synergy" as const,
+    label: "🔗 Kecocokan Kombo Dek & Relik",
+    color: "bg-emerald-400",
+  },
+];
+
 interface RecommendationDashboardProps {
   evalError: string | null;
   recommendation: RecommendationResponse | null;
@@ -52,7 +80,6 @@ export function RecommendationDashboard({
       setCopiedCode(true);
       setTimeout(() => setCopiedCode(false), 2000);
     } catch {
-      // Abaikan jika clipboard tidak diizinkan
     }
   };
 
@@ -84,7 +111,6 @@ export function RecommendationDashboard({
 
       {recommendation && (
         <div className="space-y-6">
-          {/* Header Banner Hasil Rekomendasi */}
           <div className="flex flex-col items-center">
             <div className="relative flex items-center justify-center w-full max-w-xl h-20 sm:h-24 select-none">
               <Image
@@ -105,7 +131,6 @@ export function RecommendationDashboard({
             </p>
           </div>
 
-          {/* Peringatan Skip Card jika Skor Kekuatan Kartu terlalu rendah */}
           {recommendation.is_skip_recommended && (
             <div className="cartoon-panel border-red-500 bg-gradient-to-r from-[#421c1e] via-[#331719] to-[#241315] p-5 flex items-start gap-4">
               <AlertOctagon className="h-9 w-9 shrink-0 text-red-300 mt-0.5 drop-shadow" />
@@ -125,7 +150,6 @@ export function RecommendationDashboard({
             </div>
           )}
 
-          {/* Kartu Peringkat 1, 2, 3 */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
             {recommendation.rankings.map((item) => {
               const card = cardsById.get(item.card_id);
@@ -201,7 +225,6 @@ export function RecommendationDashboard({
                       </div>
                     )}
 
-                    {/* Bar Presentase Kecocokan */}
                     <div className="cartoon-subpanel p-3 space-y-1.5">
                       <div className="flex justify-between text-xs sm:text-sm font-bold">
                         <span className="text-amber-100/90">
@@ -247,10 +270,7 @@ export function RecommendationDashboard({
               );
             })}
           </div>
-
-          {/* Kotak Penjelasan Saran Strategi & Prioritas Penilaian */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
-            {/* Kiri: Kenapa Kartu Ini Direkomendasikan (menggunakan gaya ftue_popup / lampu ide) */}
             <div className="lg:col-span-7 cartoon-panel p-5 space-y-3.5">
               <div className="flex items-center gap-2.5">
                 <div className="flex h-9 w-9 items-center justify-center rounded-xl border-2 border-[#0e161b] bg-amber-400 text-slate-950 font-bold text-lg shadow">
@@ -284,8 +304,6 @@ export function RecommendationDashboard({
                 </div>
               )}
             </div>
-
-            {/* Kanan: Prioritas Penilaian Saat Ini */}
             <div className="lg:col-span-5 cartoon-panel p-5 space-y-3">
               <div className="flex items-center gap-2 text-sm sm:text-base font-bold text-sky-300 cartoon-text-shadow">
                 <Sliders className="h-5 w-5" />
@@ -296,53 +314,28 @@ export function RecommendationDashboard({
               </p>
 
               <div className="space-y-3 pt-1">
-                {[
-                  {
-                    label: "⚡ Hemat Energi Kartu",
-                    val: recommendation.weights.w1_cost,
-                    color: "bg-amber-400",
-                  },
-                  {
-                    label: "⚔️ Kekuatan Serangan",
-                    val: recommendation.weights.w2_offensive,
-                    color: "bg-red-500",
-                  },
-                  {
-                    label: "🛡️ Kekuatan Pertahanan (Block)",
-                    val: recommendation.weights.w3_defensive,
-                    color: "bg-sky-400",
-                  },
-                  {
-                    label: "💎 Kelangkaan Kartu",
-                    val: recommendation.weights.w4_rarity,
-                    color: "bg-purple-400",
-                  },
-                  {
-                    label: "🔗 Kecocokan Kombo Dek & Relik",
-                    val: recommendation.weights.w5_synergy,
-                    color: "bg-emerald-400",
-                  },
-                ].map((w) => (
-                  <div key={w.label} className="space-y-1">
-                    <div className="flex justify-between text-xs sm:text-sm font-bold">
-                      <span className="text-amber-100">{w.label}</span>
-                      <span className="text-amber-300">
-                        {(w.val * 100).toFixed(0)}%
-                      </span>
+                {WEIGHT_BAR_ITEMS.map((w) => {
+                  const val = recommendation.weights[w.key];
+                  return (
+                    <div key={w.key} className="space-y-1">
+                      <div className="flex justify-between text-xs sm:text-sm font-bold">
+                        <span className="text-amber-100">{w.label}</span>
+                        <span className="text-amber-300">
+                          {(val * 100).toFixed(0)}%
+                        </span>
+                      </div>
+                      <div className="h-2.5 w-full overflow-hidden rounded-full border border-[#0e161b] bg-[#0e161b]">
+                        <div
+                          className={`h-full rounded-full ${w.color}`}
+                          style={{ width: `${Math.min(100, val * 100)}%` }}
+                        />
+                      </div>
                     </div>
-                    <div className="h-2.5 w-full overflow-hidden rounded-full border border-[#0e161b] bg-[#0e161b]">
-                      <div
-                        className={`h-full rounded-full ${w.color}`}
-                        style={{ width: `${Math.min(100, w.val * 100)}%` }}
-                      />
-                    </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           </div>
-
-          {/* Aksi Tindak Lanjut (Ambil / Lewati / Simpan Sesi) */}
           <div className="cartoon-panel p-4 sm:p-5 flex flex-wrap items-center justify-between gap-3">
             <div className="flex flex-wrap items-center gap-3">
               {recommendation.rankings[0] && (
