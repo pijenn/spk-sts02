@@ -144,7 +144,18 @@ export default function HomeSpkPage() {
     );
   };
 
-  const canEvaluate = rewardSlots.every((id) => Boolean(id));
+  const handleSetRewardSlotCount = (count: 3 | 4) => {
+    if (count === 4 && rewardSlots.length < 4) {
+      setCustomRewardSlots([...rewardSlots, null]);
+    } else if (count === 3 && rewardSlots.length > 3) {
+      setCustomRewardSlots(rewardSlots.slice(0, 3));
+    }
+  };
+
+  const canEvaluate =
+    rewardSlots.length >= 3 &&
+    rewardSlots.length <= 4 &&
+    rewardSlots.every((id) => Boolean(id));
 
   const handleEvaluate = async () => {
     if (!canEvaluate) return;
@@ -199,23 +210,28 @@ export default function HomeSpkPage() {
     const card = cardsById.get(cardId);
     const nextDeck = [...deckCardIds, cardId];
     setCustomDeckCardIds(nextDeck);
-    setCustomRewardSlots([null, null, null]);
+    setCustomRewardSlots(new Array(rewardSlots.length).fill(null));
     setStatusBanner(
       `Kartu "${card?.name || "Terpilih"}" berhasil ditambahkan ke Dek Saat Ini (${
         nextDeck.length
-      } kartu)! Silakan pilih 3 kartu hadiah berikutnya atau kembali ke pengaturan dek.`
+      } kartu)! Silakan pilih kartu hadiah berikutnya atau kembali ke pengaturan dek.`
     );
   };
 
   const handleSkipReward = () => {
-    setCustomRewardSlots([null, null, null]);
+    setCustomRewardSlots(new Array(rewardSlots.length).fill(null));
     setStatusBanner(
-      "Kamu melewati kartu hadiah (Skip Card) agar dek tetap ramping dan konsisten. Silakan masukkan 3 kartu hadiah untuk lantai berikutnya!"
+      "Kamu melewati kartu hadiah (Skip Card) agar dek tetap ramping dan konsisten. Silakan masukkan kartu hadiah untuk lantai berikutnya!"
     );
   };
 
   const executeSaveSession = async (targetUserId: string) => {
-    if (!recommendation || evaluatedRewardIds.length !== 3) return;
+    if (
+      !recommendation ||
+      evaluatedRewardIds.length < 3 ||
+      evaluatedRewardIds.length > 4
+    )
+      return;
     setIsSavingSession(true);
     setEvalError(null);
     try {
@@ -347,6 +363,7 @@ export default function HomeSpkPage() {
               character={character}
               rewardSlots={rewardSlots}
               onSelectSlotCard={handleSelectSlotCard}
+              onSetRewardSlotCount={handleSetRewardSlotCount}
               onBackToPanelA={() => {
                 setFlowStep("panelA");
                 window.scrollTo({ top: 0, behavior: "smooth" });

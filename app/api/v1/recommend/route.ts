@@ -77,12 +77,13 @@ export async function POST(request: NextRequest) {
     !isValidUuidList(active_relics) ||
     !isValidUuidList(current_deck_cards) ||
     !isValidUuidList(reward_card_ids) ||
-    reward_card_ids.length !== 3
+    reward_card_ids.length < 3 ||
+    reward_card_ids.length > 4
   ) {
     return NextResponse.json(
       {
         detail:
-          "Format UUID tidak valid atau jumlah reward_card_ids tidak tepat 3 kartu hadiah.",
+          "Format UUID tidak valid atau jumlah reward_card_ids harus memuat 3 hingga 4 kartu hadiah.",
       },
       { status: 422 }
     );

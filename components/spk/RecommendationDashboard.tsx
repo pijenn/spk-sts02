@@ -10,6 +10,7 @@ import {
   Copy,
   ExternalLink,
   FastForward,
+  Info,
   PlusCircle,
   Save,
   Sliders,
@@ -139,18 +140,24 @@ export function RecommendationDashboard({
                   SARAN TERBAIK: LEWATI HADIAH (SKIP CARD)
                 </h3>
                 <p className="mt-1 text-sm text-red-100/90 leading-relaxed">
-                  Skor Kekuatan Kartu tertinggi (
+                  Nilai utilitas (<em>Vektor S</em>) tertinggi dari pilihan kartu ini (
                   <strong>{recommendation.max_vector_s.toFixed(2)}</strong>) masih
-                  di bawah nilai kelayakan minimal (
-                  <strong>{recommendation.skip_threshold.toFixed(2)}</strong>).
-                  Ketiga kartu ini kurang cocok dengan dek kamu saat ini — sebaiknya{" "}
-                  <strong>Skip Card</strong> agar dek tidak penuh dengan kartu yang sulit digunakan!
+                  berada di bawah ambang batas kelayakan minimal{" "}
+                  <strong>Skip Card (θ = {recommendation.skip_threshold.toFixed(2)})</strong>.
+                  Pilihan kartu ini kurang cocok dengan kondisi dek kamu saat ini — sebaiknya{" "}
+                  <strong>Skip Card</strong> agar dek tidak penuh dengan kartu yang sulit digunakan (<em>deck bloat</em>)!
                 </p>
               </div>
             </div>
           )}
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
+          <div
+            className={`grid grid-cols-1 gap-5 ${
+              recommendation.rankings.length === 4
+                ? "md:grid-cols-2 lg:grid-cols-4"
+                : "lg:grid-cols-3"
+            }`}
+          >
             {recommendation.rankings.map((item) => {
               const card = cardsById.get(item.card_id);
               const isTopPick =
@@ -177,7 +184,10 @@ export function RecommendationDashboard({
                           Pilihan #{item.rank}
                         </span>
                       )}
-                      <span className="rounded-xl border-2 border-[#0e161b] bg-[#142027] px-2.5 py-1 text-xs sm:text-sm font-bold text-amber-300">
+                      <span
+                        className="inline-flex items-center gap-1 rounded-xl border-2 border-[#0e161b] bg-[#142027] px-2.5 py-1 text-xs sm:text-sm font-bold text-amber-300"
+                        title={`Vektor S = ${item.vector_s.toFixed(4)} vs Ambang Batas Skip Card (θ = ${recommendation.skip_threshold.toFixed(2)})`}
+                      >
                         {item.preference_percentage.toFixed(1)}% Cocok
                       </span>
                     </div>
@@ -200,14 +210,9 @@ export function RecommendationDashboard({
                             {item.name}
                           </h4>
                           <p className="text-xs font-bold text-amber-200/75">
-                            {card.rarity} • {card.type}
+                            {card.rarity} • {card.type} • Energi{" "}
+                            {card.cost === -1 ? "X" : card.cost ?? 0}
                           </p>
-                          <div className="inline-block rounded-lg border border-[#0e161b] bg-[#142027] px-2.5 py-1 text-xs text-amber-100">
-                            Skor Kekuatan Kartu:{" "}
-                            <strong className="text-sky-300">
-                              {item.vector_s.toFixed(2)}
-                            </strong>
-                          </div>
 
                           {item.matched_keywords.length > 0 && (
                             <div className="pt-1 flex flex-wrap gap-1">
@@ -284,6 +289,23 @@ export function RecommendationDashboard({
               <p className="text-sm sm:text-base text-amber-50 leading-relaxed rounded-xl border-2 border-[#0e161b] bg-[#152229] p-3.5">
                 {humanizeTacticalReason(recommendation.tactical_reason)}
               </p>
+
+              <div className="rounded-xl border border-[#0e161b] bg-[#142027]/90 px-3.5 py-2.5 text-xs text-amber-100/85 flex items-start gap-2.5">
+                <Info className="h-4 w-4 shrink-0 text-sky-300 mt-0.5" />
+                <div>
+                  <span className="font-bold text-sky-300">
+                    Keterangan Evaluasi WP-DSW (Vektor S vs Skip Card):{" "}
+                  </span>
+                  Sistem menghitung nilai utilitas intrinsik &amp; situasional (<em>Vektor S</em>) tiap kandidat kartu dan membandingkannya terhadap ambang batas kelayakan{" "}
+                  <strong>Skip Card (θ = {recommendation.skip_threshold.toFixed(2)})</strong>. Nilai tertinggi saat ini adalah{" "}
+                  <strong className="text-amber-300">
+                    S = {recommendation.max_vector_s.toFixed(2)}
+                  </strong>{" "}
+                  ({recommendation.is_skip_recommended
+                    ? "di bawah θ, disarankan Skip Card untuk mencegah deck bloat"
+                    : "memenuhi ambang batas θ, layak diambil ke dalam dek"}).
+                </div>
+              </div>
 
               {recommendation.weights.active_rules.length > 0 && (
                 <div className="pt-1">

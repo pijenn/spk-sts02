@@ -28,7 +28,8 @@ export async function POST(request: NextRequest) {
     !body.act_level ||
     typeof body.hp_ratio !== "number" ||
     !Array.isArray(body.offered_cards) ||
-    body.offered_cards.length !== 3 ||
+    body.offered_cards.length < 3 ||
+    body.offered_cards.length > 4 ||
     !body.recommended_card ||
     !body.vector_scores ||
     !body.tactical_reason

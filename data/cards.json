@@ -14,7 +14,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -39,7 +39,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -64,7 +64,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": 1,
     "keywords": [
@@ -137,7 +137,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 3,
+    "c5_synergy": 4,
     "cards_draw": null,
     "energy_gain": 2,
     "keywords": [
@@ -185,7 +185,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [],
@@ -284,7 +284,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -335,7 +335,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": 1,
     "energy_gain": null,
     "keywords": [],
@@ -383,7 +383,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 3,
+    "c5_synergy": 4,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [],
@@ -406,7 +406,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 3,
+    "c5_synergy": 4,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [],
@@ -668,7 +668,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": 1,
     "energy_gain": null,
     "keywords": [
@@ -788,7 +788,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [],
@@ -811,7 +811,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -861,7 +861,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 3,
+    "c5_synergy": 4,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [],
@@ -907,7 +907,7 @@
     "c2_offensive": 3,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 3,
+    "c5_synergy": 4,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [],
@@ -930,7 +930,7 @@
     "c2_offensive": 1,
     "c3_defensive": 5,
     "c4_rarity": 3,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -955,7 +955,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -980,7 +980,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": 2,
     "keywords": [
@@ -1006,7 +1006,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -1156,7 +1156,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [],
@@ -1204,7 +1204,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -1229,7 +1229,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -1254,7 +1254,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -1354,7 +1354,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [],
@@ -1589,10 +1589,12 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 1,
-    "c5_synergy": 1,
+    "c5_synergy": 3,
     "cards_draw": null,
     "energy_gain": null,
-    "keywords": [],
+    "keywords": [
+      "Self_Damage"
+    ],
     "is_rewardable": false,
     "description": "At the end of your turn, if this is in your Hand, lose 13 HP.",
     "image_url": "https://cdn.spire-codex.com/cards-full/stable/bad_luck.webp"
@@ -1897,10 +1899,12 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 1,
-    "c5_synergy": 1,
+    "c5_synergy": 3,
     "cards_draw": null,
     "energy_gain": null,
-    "keywords": [],
+    "keywords": [
+      "Self_Damage"
+    ],
     "is_rewardable": false,
     "description": "At the end of your turn, if this is in your [gold]Hand[/gold], lose 1 HP for each card in your [gold]Hand[/gold].",
     "image_url": "https://cdn.spire-codex.com/cards-full/stable/regret.webp"
@@ -1943,7 +1947,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 1,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -2115,7 +2119,7 @@
     "c2_offensive": 3,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -2140,10 +2144,12 @@
     "c2_offensive": 1,
     "c3_defensive": 2,
     "c4_rarity": 1,
-    "c5_synergy": 1,
+    "c5_synergy": 3,
     "cards_draw": null,
     "energy_gain": null,
-    "keywords": [],
+    "keywords": [
+      "Self_Status"
+    ],
     "is_rewardable": true,
     "description": "Gain 6 [gold]Block[/gold].\nAdd a [gold]Dazed[/gold] into your [gold]Discard Pile[/gold].",
     "image_url": "https://cdn.spire-codex.com/cards-full/stable/boost_away.webp"
@@ -2189,7 +2195,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 3,
+    "c5_synergy": 4,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -2240,7 +2246,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 3,
+    "c5_synergy": 4,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [],
@@ -2288,7 +2294,7 @@
     "c2_offensive": 1,
     "c3_defensive": 2,
     "c4_rarity": 1,
-    "c5_synergy": 3,
+    "c5_synergy": 4,
     "cards_draw": null,
     "energy_gain": 1,
     "keywords": [
@@ -2389,10 +2395,12 @@
     "c2_offensive": 1,
     "c3_defensive": 2,
     "c4_rarity": 3,
-    "c5_synergy": 1,
+    "c5_synergy": 3,
     "cards_draw": null,
     "energy_gain": null,
-    "keywords": [],
+    "keywords": [
+      "Self_Status"
+    ],
     "is_rewardable": true,
     "description": "Gain 6 [gold]Block[/gold].\n[gold]Transform[/gold] all Status cards in your [gold]Hand[/gold] into [gold]Fuel[/gold].",
     "image_url": "https://cdn.spire-codex.com/cards-full/stable/compact.webp"
@@ -2463,7 +2471,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [],
@@ -2513,7 +2521,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [],
@@ -2585,7 +2593,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 3,
+    "c5_synergy": 4,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -2660,7 +2668,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 3,
+    "c5_synergy": 4,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -2685,7 +2693,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": 2,
     "keywords": [
@@ -2736,7 +2744,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 3,
+    "c5_synergy": 4,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [],
@@ -2759,10 +2767,12 @@
     "c2_offensive": 1,
     "c3_defensive": 4,
     "c4_rarity": 3,
-    "c5_synergy": 1,
+    "c5_synergy": 3,
     "cards_draw": null,
     "energy_gain": null,
-    "keywords": [],
+    "keywords": [
+      "Self_Status"
+    ],
     "is_rewardable": true,
     "description": "Gain 13 [gold]Block[/gold].\nAdd 2 [gold]Wounds[/gold] into your [gold]Discard Pile[/gold].",
     "image_url": "https://cdn.spire-codex.com/cards-full/stable/fight_through.webp"
@@ -2782,11 +2792,12 @@
     "c2_offensive": 2,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 2,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
-      "Exhaust"
+      "Exhaust",
+      "Self_Status"
     ],
     "is_rewardable": true,
     "description": "[gold]Exhaust[/gold] ALL your Status cards.\nDeal 8 damage to a random enemy for each card [gold]Exhausted[/gold].",
@@ -2859,7 +2870,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -2910,11 +2921,12 @@
     "c2_offensive": 1,
     "c3_defensive": 2,
     "c4_rarity": 3,
-    "c5_synergy": 2,
+    "c5_synergy": 3,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
-      "Channel"
+      "Channel",
+      "Glass"
     ],
     "is_rewardable": true,
     "description": "Gain 5 [gold]Block[/gold].\n[gold]Channel[/gold] 1 [gold]Glass[/gold].",
@@ -2960,10 +2972,12 @@
     "c2_offensive": 3,
     "c3_defensive": 1,
     "c4_rarity": 1,
-    "c5_synergy": 1,
+    "c5_synergy": 3,
     "cards_draw": null,
     "energy_gain": null,
-    "keywords": [],
+    "keywords": [
+      "Self_Status"
+    ],
     "is_rewardable": true,
     "description": "Deal 4 damage 3 times.\nAdd a [gold]Slimed[/gold] into your [gold]Discard Pile[/gold].",
     "image_url": "https://cdn.spire-codex.com/cards-full/stable/gunk_up.webp"
@@ -2983,7 +2997,7 @@
     "c2_offensive": 2,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 3,
+    "c5_synergy": 4,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -3031,7 +3045,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 1,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -3160,11 +3174,12 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
-      "Draw"
+      "Draw",
+      "Self_Status"
     ],
     "is_rewardable": true,
     "description": "The first time you draw a Status each turn, draw 2 cards.",
@@ -3234,7 +3249,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [],
@@ -3408,11 +3423,12 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 3,
+    "c5_synergy": 5,
     "cards_draw": 2,
     "energy_gain": null,
     "keywords": [
-      "Draw"
+      "Draw",
+      "Self_Status"
     ],
     "is_rewardable": true,
     "description": "Draw 2 cards.\nAdd a [gold]Burn[/gold] into your [gold]Discard Pile[/gold].",
@@ -3513,11 +3529,12 @@
     "c2_offensive": 4,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 2,
+    "c5_synergy": 3,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
-      "Channel"
+      "Channel",
+      "Glass"
     ],
     "is_rewardable": true,
     "description": "Deal 9 damage twice.\n[gold]Channel[/gold] 2 [gold]Glass[/gold].",
@@ -3538,11 +3555,12 @@
     "c2_offensive": 3,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": 1,
     "energy_gain": null,
     "keywords": [
-      "Draw"
+      "Draw",
+      "Self_Status"
     ],
     "is_rewardable": true,
     "description": "Deal 13 damage.\nDraw 1 card.\nWhenever you create a Status, reduce this card's cost to 0 [energy:1] until played.",
@@ -3563,7 +3581,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": 2,
     "keywords": [
@@ -3594,7 +3612,8 @@
     "energy_gain": null,
     "keywords": [
       "Draw",
-      "Sly"
+      "Sly",
+      "Zero_Cost"
     ],
     "is_rewardable": true,
     "description": "Deal 7 damage.\nDraw 4 cards.\nDiscard all cards drawn this way that do not cost 0 [energy:1].",
@@ -3666,7 +3685,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -3716,10 +3735,12 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
-    "keywords": [],
+    "keywords": [
+      "Self_Status"
+    ],
     "is_rewardable": true,
     "description": "Whenever you create a Status, deal 5 damage to ALL enemies.",
     "image_url": "https://cdn.spire-codex.com/cards-full/stable/smokestack.webp"
@@ -3743,7 +3764,8 @@
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
-      "Channel"
+      "Channel",
+      "Glass"
     ],
     "is_rewardable": true,
     "description": "At the start of your turn, [gold]Channel[/gold] 1 [gold]Glass[/gold].",
@@ -3838,7 +3860,7 @@
     "c2_offensive": 5,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 3,
+    "c5_synergy": 4,
     "cards_draw": null,
     "energy_gain": 3,
     "keywords": [
@@ -3863,7 +3885,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": 4,
     "keywords": [
@@ -3940,10 +3962,12 @@
     "c2_offensive": 3,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 1,
+    "c5_synergy": 3,
     "cards_draw": null,
     "energy_gain": null,
-    "keywords": [],
+    "keywords": [
+      "Zero_Cost"
+    ],
     "is_rewardable": true,
     "description": "Deal 14 damage.\nThe next Power you play costs 0 [energy:1].",
     "image_url": "https://cdn.spire-codex.com/cards-full/stable/synthesis.webp"
@@ -3963,7 +3987,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 1,
-    "c5_synergy": 3,
+    "c5_synergy": 4,
     "cards_draw": null,
     "energy_gain": 2,
     "keywords": [
@@ -4069,7 +4093,8 @@
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
-      "Channel"
+      "Channel",
+      "Self_Status"
     ],
     "is_rewardable": true,
     "description": "Whenever you create a Status, [gold]Channel[/gold] 1 random Orb.",
@@ -4140,7 +4165,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -4294,7 +4319,7 @@
     "c2_offensive": 2,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -4342,7 +4367,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -4390,7 +4415,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -4488,7 +4513,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [],
@@ -4583,7 +4608,7 @@
     "c2_offensive": 3,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": 2,
     "energy_gain": null,
     "keywords": [
@@ -4608,7 +4633,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 3,
+    "c5_synergy": 4,
     "cards_draw": null,
     "energy_gain": 2,
     "keywords": [
@@ -4800,7 +4825,7 @@
     "c2_offensive": 5,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -4825,7 +4850,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -4850,7 +4875,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -4923,7 +4948,7 @@
     "c2_offensive": 2,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -5023,10 +5048,12 @@
     "c2_offensive": 1,
     "c3_defensive": 4,
     "c4_rarity": 1,
-    "c5_synergy": 1,
+    "c5_synergy": 3,
     "cards_draw": null,
     "energy_gain": null,
-    "keywords": [],
+    "keywords": [
+      "Self_Damage"
+    ],
     "is_rewardable": true,
     "description": "Lose 2 HP.\nGain 16 [gold]Block[/gold].",
     "image_url": "https://cdn.spire-codex.com/cards-full/stable/blood_wall.webp"
@@ -5046,11 +5073,12 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 1,
-    "c5_synergy": 3,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": 2,
     "keywords": [
-      "Energy"
+      "Energy",
+      "Self_Damage"
     ],
     "is_rewardable": true,
     "description": "Lose 3 HP.\nGain [energy:2].",
@@ -5119,11 +5147,12 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 3,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
       "Exhaust",
+      "Self_Damage",
       "Strength"
     ],
     "is_rewardable": true,
@@ -5170,10 +5199,12 @@
     "c2_offensive": 2,
     "c3_defensive": 1,
     "c4_rarity": 1,
-    "c5_synergy": 1,
+    "c5_synergy": 3,
     "cards_draw": null,
     "energy_gain": null,
-    "keywords": [],
+    "keywords": [
+      "Self_Damage"
+    ],
     "is_rewardable": true,
     "description": "Lose 1 HP.\nDeal 9 damage to ALL enemies.",
     "image_url": "https://cdn.spire-codex.com/cards-full/stable/breakthrough.webp"
@@ -5267,7 +5298,7 @@
     "c2_offensive": 4,
     "c3_defensive": 1,
     "c4_rarity": 1,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -5344,7 +5375,8 @@
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
-      "Exhaust"
+      "Exhaust",
+      "Zero_Cost"
     ],
     "is_rewardable": false,
     "description": "Skills cost 0 [energy:1].\nWhenever you play a Skill, [gold]Exhaust[/gold] it.",
@@ -5365,10 +5397,12 @@
     "c2_offensive": 1,
     "c3_defensive": 3,
     "c4_rarity": 5,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
-    "keywords": [],
+    "keywords": [
+      "Self_Damage"
+    ],
     "is_rewardable": true,
     "description": "At the start of your turn, lose 1 HP and gain 8 [gold]Block[/gold].",
     "image_url": "https://cdn.spire-codex.com/cards-full/stable/crimson_mantle.webp"
@@ -5388,7 +5422,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 3,
+    "c5_synergy": 4,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -5462,7 +5496,7 @@
     "c2_offensive": 5,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -5487,12 +5521,13 @@
     "c2_offensive": 2,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
       "Block_Scaling",
-      "Exhaust"
+      "Exhaust",
+      "Self_Damage"
     ],
     "is_rewardable": false,
     "description": "Lose 1 HP.\nGive another player [gold]Block[/gold] equal to your [gold]Block[/gold].",
@@ -5592,7 +5627,7 @@
     "c2_offensive": 1,
     "c3_defensive": 3,
     "c4_rarity": 3,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -5617,7 +5652,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 3,
+    "c5_synergy": 4,
     "cards_draw": null,
     "energy_gain": 0,
     "keywords": [
@@ -5642,7 +5677,7 @@
     "c2_offensive": 3,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -5692,7 +5727,7 @@
     "c2_offensive": 2,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -5765,7 +5800,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": 3,
     "keywords": [
@@ -5791,7 +5826,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 1,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -5864,10 +5899,12 @@
     "c2_offensive": 4,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 1,
+    "c5_synergy": 3,
     "cards_draw": null,
     "energy_gain": null,
-    "keywords": [],
+    "keywords": [
+      "Self_Damage"
+    ],
     "is_rewardable": true,
     "description": "Lose 2 HP.\nDeal 15 damage.",
     "image_url": "https://cdn.spire-codex.com/cards-full/stable/hemokinesis.webp"
@@ -5887,7 +5924,7 @@
     "c2_offensive": 4,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -5912,7 +5949,7 @@
     "c2_offensive": 1,
     "c3_defensive": 5,
     "c4_rarity": 5,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -5937,7 +5974,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -5962,10 +5999,12 @@
     "c2_offensive": 2,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
-    "keywords": [],
+    "keywords": [
+      "Self_Damage"
+    ],
     "is_rewardable": true,
     "description": "At the start of your turn, lose 1 HP.\nWhenever you lose HP on your turn, deal 6 damage to ALL enemies.",
     "image_url": "https://cdn.spire-codex.com/cards-full/stable/inferno.webp"
@@ -6058,7 +6097,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 3,
+    "c5_synergy": 4,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [],
@@ -6132,7 +6171,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -6163,7 +6202,8 @@
     "keywords": [
       "Draw",
       "Energy",
-      "Exhaust"
+      "Exhaust",
+      "Self_Damage"
     ],
     "is_rewardable": true,
     "description": "Lose 6 HP.\nGain [energy:2].\nDraw 3 cards.",
@@ -6207,7 +6247,7 @@
     "c2_offensive": 4,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": 3,
     "energy_gain": null,
     "keywords": [
@@ -6326,7 +6366,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": 1,
     "keywords": [
@@ -6397,10 +6437,11 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
+      "Self_Damage",
       "Strength"
     ],
     "is_rewardable": true,
@@ -6422,7 +6463,7 @@
     "c2_offensive": 1,
     "c3_defensive": 2,
     "c4_rarity": 3,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -6497,10 +6538,12 @@
     "c2_offensive": 3,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 1,
+    "c5_synergy": 3,
     "cards_draw": null,
     "energy_gain": null,
-    "keywords": [],
+    "keywords": [
+      "Self_Damage"
+    ],
     "is_rewardable": true,
     "description": "Deal 5 damage.\nIf you lost HP this turn,\nhits 2 times.",
     "image_url": "https://cdn.spire-codex.com/cards-full/stable/spite.webp"
@@ -6520,7 +6563,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 3,
+    "c5_synergy": 4,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [],
@@ -6543,7 +6586,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -6591,7 +6634,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 3,
+    "c5_synergy": 4,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [],
@@ -6660,7 +6703,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [],
@@ -6708,10 +6751,12 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 1,
+    "c5_synergy": 3,
     "cards_draw": null,
     "energy_gain": null,
-    "keywords": [],
+    "keywords": [
+      "Self_Damage"
+    ],
     "is_rewardable": true,
     "description": "Deal 5 damage.\nHits an additional time for each time you lost HP this combat.",
     "image_url": "https://cdn.spire-codex.com/cards-full/stable/tear_asunder.webp"
@@ -6731,7 +6776,7 @@
     "c2_offensive": 2,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -6807,7 +6852,7 @@
     "c2_offensive": 1,
     "c3_defensive": 2,
     "c4_rarity": 1,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -6855,7 +6900,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [],
@@ -6878,10 +6923,12 @@
     "c2_offensive": 3,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 1,
+    "c5_synergy": 3,
     "cards_draw": null,
     "energy_gain": null,
-    "keywords": [],
+    "keywords": [
+      "Zero_Cost"
+    ],
     "is_rewardable": true,
     "description": "Deal 14 damage.\nThe next Attack you play costs 0 [energy:1].",
     "image_url": "https://cdn.spire-codex.com/cards-full/stable/unrelenting.webp"
@@ -7002,7 +7049,7 @@
     "c2_offensive": 5,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 3,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": 2,
     "keywords": [
@@ -7103,7 +7150,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 3,
+    "c5_synergy": 4,
     "cards_draw": null,
     "energy_gain": 4,
     "keywords": [
@@ -7151,7 +7198,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 3,
+    "c5_synergy": 4,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -7176,7 +7223,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": 1,
     "energy_gain": null,
     "keywords": [
@@ -7253,7 +7300,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -7477,7 +7524,7 @@
     "c2_offensive": 1,
     "c3_defensive": 3,
     "c4_rarity": 3,
-    "c5_synergy": 3,
+    "c5_synergy": 4,
     "cards_draw": null,
     "energy_gain": 1,
     "keywords": [
@@ -7607,7 +7654,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": 3,
     "energy_gain": null,
     "keywords": [
@@ -7632,7 +7679,7 @@
     "c2_offensive": 1,
     "c3_defensive": 5,
     "c4_rarity": 5,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -7785,11 +7832,12 @@
     "c2_offensive": 3,
     "c3_defensive": 1,
     "c4_rarity": 1,
-    "c5_synergy": 2,
+    "c5_synergy": 4,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
-      "Osty"
+      "Osty",
+      "Zero_Cost"
     ],
     "is_rewardable": true,
     "description": "[gold]Osty[/gold] deals 12 damage.\nThis card costs 0 [energy:1] if [gold]Osty[/gold] has attacked this turn.",
@@ -7810,7 +7858,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 3,
+    "c5_synergy": 4,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [],
@@ -7912,7 +7960,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 1,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -7960,7 +8008,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -8011,7 +8059,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 1,
-    "c5_synergy": 3,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": 2,
     "keywords": [
@@ -8063,7 +8111,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 3,
+    "c5_synergy": 4,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -8088,7 +8136,7 @@
     "c2_offensive": 1,
     "c3_defensive": 4,
     "c4_rarity": 3,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": 1,
     "keywords": [
@@ -8136,7 +8184,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -8518,7 +8566,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -8699,7 +8747,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [],
@@ -8773,7 +8821,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -8823,7 +8871,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [],
@@ -8923,7 +8971,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -9022,7 +9070,7 @@
     "c2_offensive": 3,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -9073,7 +9121,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": 1,
     "keywords": [
@@ -9147,11 +9195,12 @@
     "c2_offensive": 3,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 2,
+    "c5_synergy": 4,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
-      "Ethereal"
+      "Ethereal",
+      "Zero_Cost"
     ],
     "is_rewardable": true,
     "description": "Deal 10 damage.\nThe next [gold]Ethereal[/gold] card you play costs 0 [energy:1].",
@@ -9172,7 +9221,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 1,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": 1,
     "keywords": [
@@ -9267,7 +9316,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 3,
+    "c5_synergy": 4,
     "cards_draw": null,
     "energy_gain": 2,
     "keywords": [
@@ -9292,10 +9341,11 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
+      "Creation",
       "Strength"
     ],
     "is_rewardable": true,
@@ -9340,10 +9390,12 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 1,
-    "c5_synergy": 1,
+    "c5_synergy": 3,
     "cards_draw": null,
     "energy_gain": null,
-    "keywords": [],
+    "keywords": [
+      "Creation"
+    ],
     "is_rewardable": true,
     "description": "Choose a card in your [gold]Hand[/gold] to [gold]Transform[/gold] into [gold]Minion Strike[/gold].",
     "image_url": "https://cdn.spire-codex.com/cards-full/stable/begone.webp"
@@ -9395,7 +9447,8 @@
       "Draw",
       "Energy",
       "Exhaust",
-      "Forge"
+      "Forge",
+      "Stars"
     ],
     "is_rewardable": true,
     "description": "Draw 1 card.\nGain [energy:1].\nGain [star:1].\n[gold]Forge[/gold] 5.",
@@ -9416,10 +9469,12 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
-    "keywords": [],
+    "keywords": [
+      "Stars"
+    ],
     "is_rewardable": true,
     "description": "Whenever you spend or gain [star:1], deal 3 damage to ALL enemies.",
     "image_url": "https://cdn.spire-codex.com/cards-full/stable/black_hole.webp"
@@ -9489,7 +9544,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": 3,
     "energy_gain": null,
     "keywords": [
@@ -9514,10 +9569,11 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 3,
+    "c5_synergy": 5,
     "cards_draw": 2,
     "energy_gain": null,
     "keywords": [
+      "Creation",
       "Draw"
     ],
     "is_rewardable": true,
@@ -9562,10 +9618,12 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
-    "keywords": [],
+    "keywords": [
+      "Stars"
+    ],
     "is_rewardable": true,
     "description": "Whenever you spend [star:1], gain 2 [gold]Block[/gold] for each [star:1] spent.",
     "image_url": "https://cdn.spire-codex.com/cards-full/stable/child_of_the_stars.webp"
@@ -9682,12 +9740,13 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": 1,
     "keywords": [
       "Energy",
-      "Retain"
+      "Retain",
+      "Stars"
     ],
     "is_rewardable": true,
     "description": "Next turn,\ngain [energy:1] and [star:1].\n[gold]Retain[/gold] your [gold]Hand[/gold] this turn.",
@@ -9754,10 +9813,12 @@
     "c2_offensive": 2,
     "c3_defensive": 1,
     "c4_rarity": 1,
-    "c5_synergy": 3,
+    "c5_synergy": 4,
     "cards_draw": null,
     "energy_gain": null,
-    "keywords": [],
+    "keywords": [
+      "Stars"
+    ],
     "is_rewardable": true,
     "description": "Deal 8 damage.\nDeals 2 additional damage for ALL your cards that have a [star:1] cost.",
     "image_url": "https://cdn.spire-codex.com/cards-full/stable/crescent_spear.webp"
@@ -9951,7 +10012,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -9976,10 +10037,11 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 2,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
+      "Creation",
       "Exhaust"
     ],
     "is_rewardable": true,
@@ -10027,10 +10089,12 @@
     "c2_offensive": 1,
     "c3_defensive": 3,
     "c4_rarity": 1,
-    "c5_synergy": 1,
+    "c5_synergy": 3,
     "cards_draw": null,
     "energy_gain": null,
-    "keywords": [],
+    "keywords": [
+      "Stars"
+    ],
     "is_rewardable": true,
     "description": "Gain 8 [gold]Block[/gold].\nGain [star:1].",
     "image_url": "https://cdn.spire-codex.com/cards-full/stable/gather_light.webp"
@@ -10050,10 +10114,12 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
-    "keywords": [],
+    "keywords": [
+      "Stars"
+    ],
     "is_rewardable": true,
     "description": "At the start of your turn, gain [star:2].",
     "image_url": "https://cdn.spire-codex.com/cards-full/stable/genesis.webp"
@@ -10121,11 +10187,12 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 1,
-    "c5_synergy": 3,
+    "c5_synergy": 5,
     "cards_draw": 1,
     "energy_gain": null,
     "keywords": [
-      "Draw"
+      "Draw",
+      "Stars"
     ],
     "is_rewardable": true,
     "description": "Gain [star:1].\nDraw 1 card.\nNext turn, draw 1 card.",
@@ -10171,7 +10238,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -10196,7 +10263,7 @@
     "c2_offensive": 2,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": 4,
     "keywords": [
@@ -10221,7 +10288,7 @@
     "c2_offensive": 4,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 3,
+    "c5_synergy": 4,
     "cards_draw": null,
     "energy_gain": 2,
     "keywords": [
@@ -10269,10 +10336,12 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 1,
-    "c5_synergy": 1,
+    "c5_synergy": 3,
     "cards_draw": null,
     "energy_gain": null,
-    "keywords": [],
+    "keywords": [
+      "Stars"
+    ],
     "is_rewardable": true,
     "description": "Gain [star:1].\nNext turn, gain [star:3].",
     "image_url": "https://cdn.spire-codex.com/cards-full/stable/hidden_cache.webp"
@@ -10361,10 +10430,12 @@
     "c2_offensive": 5,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 1,
+    "c5_synergy": 3,
     "cards_draw": null,
     "energy_gain": null,
-    "keywords": [],
+    "keywords": [
+      "Stars"
+    ],
     "is_rewardable": true,
     "description": "Deal 30 damage.\nIf this kills an enemy, gain [star:5].",
     "image_url": "https://cdn.spire-codex.com/cards-full/stable/knockout_blow.webp"
@@ -10529,7 +10600,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -10579,7 +10650,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 3,
+    "c5_synergy": 4,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [],
@@ -10602,7 +10673,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": 1,
     "keywords": [
@@ -10627,7 +10698,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": 1,
     "energy_gain": null,
     "keywords": [
@@ -10652,10 +10723,12 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 3,
+    "c5_synergy": 4,
     "cards_draw": null,
     "energy_gain": null,
-    "keywords": [],
+    "keywords": [
+      "Forge"
+    ],
     "is_rewardable": true,
     "description": "[gold]Sovereign Blade[/gold] now gains 10 [gold]Block[/gold].",
     "image_url": "https://cdn.spire-codex.com/cards-full/stable/parry.webp"
@@ -10748,10 +10821,12 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
-    "keywords": [],
+    "keywords": [
+      "Creation"
+    ],
     "is_rewardable": true,
     "description": "Whenever you create a card, gain 3 [gold]Block[/gold].",
     "image_url": "https://cdn.spire-codex.com/cards-full/stable/pillar_of_creation.webp"
@@ -10819,10 +10894,12 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 1,
+    "c5_synergy": 3,
     "cards_draw": null,
     "energy_gain": null,
-    "keywords": [],
+    "keywords": [
+      "Stars"
+    ],
     "is_rewardable": true,
     "description": "Deal 3 damage to ALL enemies for each [star:1] gained this turn.",
     "image_url": "https://cdn.spire-codex.com/cards-full/stable/radiate.webp"
@@ -10842,7 +10919,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 1,
-    "c5_synergy": 3,
+    "c5_synergy": 4,
     "cards_draw": null,
     "energy_gain": 1,
     "keywords": [
@@ -10916,11 +10993,12 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 2,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
-      "Exhaust"
+      "Exhaust",
+      "Stars"
     ],
     "is_rewardable": true,
     "description": "Gain 9 [star:1].",
@@ -10941,7 +11019,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 3,
+    "c5_synergy": 4,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [],
@@ -10964,7 +11042,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 3,
+    "c5_synergy": 4,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -11012,10 +11090,12 @@
     "c2_offensive": 2,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 1,
+    "c5_synergy": 3,
     "cards_draw": null,
     "energy_gain": null,
-    "keywords": [],
+    "keywords": [
+      "Stars"
+    ],
     "is_rewardable": true,
     "description": "Deal 8 damage.\nGain [star:2].\nPut this card on top of your [gold]Draw Pile[/gold].",
     "image_url": "https://cdn.spire-codex.com/cards-full/stable/shining_strike.webp"
@@ -11035,10 +11115,12 @@
     "c2_offensive": 2,
     "c3_defensive": 1,
     "c4_rarity": 1,
-    "c5_synergy": 1,
+    "c5_synergy": 3,
     "cards_draw": null,
     "energy_gain": null,
-    "keywords": [],
+    "keywords": [
+      "Stars"
+    ],
     "is_rewardable": true,
     "description": "Deal 9 damage.\nGain [star:1].",
     "image_url": "https://cdn.spire-codex.com/cards-full/stable/solar_strike.webp"
@@ -11058,7 +11140,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": 1,
     "energy_gain": null,
     "keywords": [],
@@ -11178,10 +11260,12 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 1,
+    "c5_synergy": 3,
     "cards_draw": null,
     "energy_gain": null,
-    "keywords": [],
+    "keywords": [
+      "Creation"
+    ],
     "is_rewardable": true,
     "description": "Deal 5 damage.\nDeals 3 additional damage for each card you created this combat.",
     "image_url": "https://cdn.spire-codex.com/cards-full/stable/supermassive.webp"
@@ -11201,10 +11285,12 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 3,
+    "c5_synergy": 4,
     "cards_draw": null,
     "energy_gain": null,
-    "keywords": [],
+    "keywords": [
+      "Forge"
+    ],
     "is_rewardable": true,
     "description": "[gold]Sovereign Blade[/gold] gains [gold]Replay[/gold] 1.",
     "image_url": "https://cdn.spire-codex.com/cards-full/stable/sword_sage.webp"
@@ -11249,10 +11335,12 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
-    "keywords": [],
+    "keywords": [
+      "Stars"
+    ],
     "is_rewardable": false,
     "description": "Whenever you play a card, gain [star:1].",
     "image_url": "https://cdn.spire-codex.com/cards-full/stable/the_sealed_throne.webp"
@@ -11323,10 +11411,12 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 1,
-    "c5_synergy": 1,
+    "c5_synergy": 3,
     "cards_draw": null,
     "energy_gain": null,
-    "keywords": [],
+    "keywords": [
+      "Stars"
+    ],
     "is_rewardable": false,
     "description": "Gain [star:2].",
     "image_url": "https://cdn.spire-codex.com/cards-full/stable/venerate.webp"
@@ -11346,7 +11436,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 3,
+    "c5_synergy": 4,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -11423,7 +11513,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 3,
+    "c5_synergy": 4,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -11526,7 +11616,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [],
@@ -12090,7 +12180,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -12191,7 +12281,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 3,
+    "c5_synergy": 4,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -12310,7 +12400,7 @@
     "c2_offensive": 1,
     "c3_defensive": 2,
     "c4_rarity": 3,
-    "c5_synergy": 3,
+    "c5_synergy": 4,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -12435,7 +12525,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -12563,7 +12653,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -12687,7 +12777,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -12712,7 +12802,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -12737,7 +12827,7 @@
     "c2_offensive": 3,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 3,
+    "c5_synergy": 4,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -12862,10 +12952,12 @@
     "c2_offensive": 3,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 1,
+    "c5_synergy": 3,
     "cards_draw": null,
     "energy_gain": null,
-    "keywords": [],
+    "keywords": [
+      "Zero_Cost"
+    ],
     "is_rewardable": true,
     "description": "Deal 14 damage.\nThe next Skill you play costs 0 [energy:1].",
     "image_url": "https://cdn.spire-codex.com/cards-full/stable/pounce.webp"
@@ -13036,7 +13128,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [],
@@ -13379,7 +13471,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": 1,
     "keywords": [
@@ -13405,7 +13497,7 @@
     "c2_offensive": 3,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -13456,7 +13548,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 5,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -13531,7 +13623,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 3,
-    "c5_synergy": 4,
+    "c5_synergy": 5,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -13582,10 +13674,12 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 1,
-    "c5_synergy": 1,
+    "c5_synergy": 3,
     "cards_draw": null,
     "energy_gain": null,
-    "keywords": [],
+    "keywords": [
+      "Self_Damage"
+    ],
     "is_rewardable": false,
     "description": "At the end of your turn, if this is in your [gold]Hand[/gold],\n lose 6 HP.",
     "image_url": "https://cdn.spire-codex.com/cards-full/stable/beckon.webp"
@@ -13653,7 +13747,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 1,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -13773,7 +13867,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 1,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -13993,7 +14087,7 @@
     "c2_offensive": 3,
     "c3_defensive": 1,
     "c4_rarity": 1,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -14018,7 +14112,7 @@
     "c2_offensive": 1,
     "c3_defensive": 3,
     "c4_rarity": 1,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [
@@ -14069,7 +14163,7 @@
     "c2_offensive": 1,
     "c3_defensive": 1,
     "c4_rarity": 1,
-    "c5_synergy": 2,
+    "c5_synergy": 1,
     "cards_draw": null,
     "energy_gain": null,
     "keywords": [

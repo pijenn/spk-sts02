@@ -370,8 +370,16 @@ def main() -> None:
     workspace_root = app_root.parent
     repo_root = workspace_root.parent
 
-    raw_cards_path = workspace_root / "raw_cards.json"
-    raw_relics_path = workspace_root / "raw_relics.json"
+    raw_cards_path = (
+        workspace_root / "raw_cards.json"
+        if (workspace_root / "raw_cards.json").exists()
+        else repo_root / "ML" / "raw_cards.json"
+    )
+    raw_relics_path = (
+        workspace_root / "raw_relics.json"
+        if (workspace_root / "raw_relics.json").exists()
+        else repo_root / "ML" / "raw_relics.json"
+    )
     ml_cleaned_path = repo_root / "ML" / "cleaned_cards.json"
 
     raw_cards = json.loads(raw_cards_path.read_text(encoding="utf-8"))

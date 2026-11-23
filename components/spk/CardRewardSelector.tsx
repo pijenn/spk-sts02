@@ -2,7 +2,7 @@
 
 import React, { useMemo, useState } from "react";
 import Image from "next/image";
-import { ArrowLeft, Eye, Search, Sparkles, X } from "lucide-react";
+import { ArrowLeft, Eye, PlusCircle, Search, Sparkles, Trash2, X } from "lucide-react";
 import { resolveAssetUrl } from "@/lib/asset-url";
 import { CHARACTER_MAP } from "@/lib/constants";
 import type { Card, CharacterId } from "@/lib/types";
@@ -11,6 +11,7 @@ interface CardRewardSelectorProps {
   character: CharacterId;
   rewardSlots: (string | null)[];
   onSelectSlotCard: (slotIndex: number, cardId: string | null) => void;
+  onSetRewardSlotCount?: (count: 3 | 4) => void;
   onBackToPanelA: () => void;
   canEvaluate: boolean;
   isEvaluating: boolean;
@@ -24,6 +25,7 @@ export function CardRewardSelector({
   character,
   rewardSlots,
   onSelectSlotCard,
+  onSetRewardSlotCount,
   onBackToPanelA,
   canEvaluate,
   isEvaluating,
@@ -34,6 +36,7 @@ export function CardRewardSelector({
 }: CardRewardSelectorProps) {
   const [activePickerSlot, setActivePickerSlot] = useState<number | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
+  const slotCount = rewardSlots.length === 4 ? 4 : 3;
 
   const eligibleRewardCards = useMemo(() => {
     return cards.filter(
@@ -102,16 +105,48 @@ export function CardRewardSelector({
           />
           <div className="relative z-10 text-center pb-2">
             <h2 className="text-2xl sm:text-3xl font-bold text-[#2b1d0e] tracking-wide drop-shadow-[0_1px_0_rgba(255,255,255,0.4)]">
-              Pilih 3 Kartu Hadiah
+              Pilih {slotCount} Kartu Hadiah
             </h2>
           </div>
         </div>
         <p className="text-center text-sm sm:text-base text-amber-100/90 cartoon-text-shadow -mt-1">
-          Masukkan 3 pilihan kartu hadiah yang muncul di layar permainanmu
+          Masukkan {slotCount} pilihan kartu hadiah yang muncul di layar permainanmu (mendukung 3–4 slot kartu hadiah)
         </p>
+
+        {onSetRewardSlotCount && (
+          <div className="mt-3 flex flex-wrap items-center justify-center gap-2.5">
+            <button
+              type="button"
+              onClick={() => onSetRewardSlotCount(3)}
+              className={`inline-flex items-center gap-1.5 rounded-xl border-2 px-3.5 py-1.5 text-xs sm:text-sm font-bold transition cursor-pointer ${
+                slotCount === 3
+                  ? "border-amber-400 bg-amber-400 text-slate-950 shadow"
+                  : "border-[#0e161b] bg-[#16232b] text-amber-100 hover:border-amber-400/60"
+              }`}
+            >
+              <span>3 Slot Kartu (Standar)</span>
+            </button>
+            <button
+              type="button"
+              onClick={() => onSetRewardSlotCount(4)}
+              className={`inline-flex items-center gap-1.5 rounded-xl border-2 px-3.5 py-1.5 text-xs sm:text-sm font-bold transition cursor-pointer ${
+                slotCount === 4
+                  ? "border-amber-400 bg-amber-400 text-slate-950 shadow"
+                  : "border-[#0e161b] bg-[#16232b] text-amber-100 hover:border-amber-400/60"
+              }`}
+            >
+              <PlusCircle className="h-4 w-4" />
+              <span>4 Slot Kartu (+1 Opsi Relik / Lasting Candy)</span>
+            </button>
+          </div>
+        )}
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-        {[0, 1, 2].map((slotIdx) => {
+      <div
+        className={`grid grid-cols-1 gap-5 ${
+          slotCount === 4 ? "md:grid-cols-2 lg:grid-cols-4" : "md:grid-cols-3"
+        }`}
+      >
+        {Array.from({ length: slotCount }, (_, idx) => idx).map((slotIdx) => {
           const selectedId = rewardSlots[slotIdx];
           const card = selectedId ? cardsById.get(selectedId) || null : null;
 
@@ -280,7 +315,7 @@ export function CardRewardSelector({
 
         {!canEvaluate && (
           <p className="mt-2 text-xs sm:text-sm font-bold text-amber-200/80 cartoon-text-shadow">
-            Lengkapi ketiga slot kartu hadiah di atas terlebih dahulu untuk menekan tombol Proses Hasil.
+            Lengkapi ke-{slotCount} slot kartu hadiah di atas terlebih dahulu untuk menekan tombol Proses Hasil.
           </p>
         )}
       </div>
@@ -296,7 +331,7 @@ export function CardRewardSelector({
             className="cartoon-panel flex max-h-[85vh] w-full max-w-4xl flex-col p-4 sm:p-6"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex items-center justify-between gap-2 pb-3 border-b-2 border-[#152229]">
+            <div className="flex flex-wrap items-center justify-between gap-2 pb-3 border-b-2 border-[#152229]">
               <div className="flex items-center gap-2.5">
                 <Image
                   unoptimized
@@ -308,20 +343,54 @@ export function CardRewardSelector({
                 />
                 <div>
                   <h3 className="text-lg sm:text-xl font-bold text-amber-100 cartoon-text-shadow">
-                    Pilih Kartu Hadiah — Slot #{activePickerSlot + 1}
+                    Pilih Kartu Hadiah — Slot #{activePickerSlot + 1} dari {slotCount}
                   </h3>
                   <p className="text-xs text-amber-100/75">
                     Pilih salah satu dari {filteredModalCards.length} kartu yang tersedia
                   </p>
                 </div>
               </div>
-              <button
-                type="button"
-                onClick={() => setActivePickerSlot(null)}
-                className="rounded-xl border-2 border-[#0e161b] bg-[#3b2325] p-1.5 text-red-200 hover:bg-[#522e31] cursor-pointer"
-              >
-                <X className="h-5 w-5" />
-              </button>
+              <div className="flex items-center gap-2">
+                {onSetRewardSlotCount && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (slotCount === 3) {
+                        onSetRewardSlotCount(4);
+                      } else {
+                        onSetRewardSlotCount(3);
+                        if (activePickerSlot >= 3) {
+                          setActivePickerSlot(2);
+                        }
+                      }
+                    }}
+                    className={`inline-flex items-center gap-1.5 rounded-xl border-2 px-3 py-1.5 text-xs font-bold transition cursor-pointer ${
+                      slotCount === 4
+                        ? "border-amber-400 bg-amber-400 text-slate-950"
+                        : "border-[#0e161b] bg-[#16232b] text-amber-200 hover:border-amber-400"
+                    }`}
+                  >
+                    {slotCount === 3 ? (
+                      <>
+                        <PlusCircle className="h-3.5 w-3.5" />
+                        <span>Pilihan 4 Kartu Hadiah</span>
+                      </>
+                    ) : (
+                      <>
+                        <Trash2 className="h-3.5 w-3.5" />
+                        <span>Kembali ke 3 Kartu</span>
+                      </>
+                    )}
+                  </button>
+                )}
+                <button
+                  type="button"
+                  onClick={() => setActivePickerSlot(null)}
+                  className="rounded-xl border-2 border-[#0e161b] bg-[#3b2325] p-1.5 text-red-200 hover:bg-[#522e31] cursor-pointer"
+                >
+                  <X className="h-5 w-5" />
+                </button>
+              </div>
             </div>
 
             <div className="relative my-3.5">

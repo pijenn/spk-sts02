@@ -196,18 +196,83 @@ export const RELIC_KEYWORDS_MAP: Record<string, string[]> = {
   the_abacus: ["Block_Scaling", "Draw"],
   the_specimen: ["Poison"],
   tingsha: ["Sly"],
+  throwing_axe: ["Innate"],
   toasty_mittens: ["Exhaust", "Strength"],
   tough_bandages: ["Sly", "Block_Scaling"],
   twisted_funnel: ["Poison"],
   undying_sigil: ["Doom"],
   vajra: ["Strength"],
   vambrace: ["Block_Scaling"],
+  venerable_tea_set: ["Innate"],
+  fake_venerable_tea_set: ["Innate"],
   wrist_blade: ["Shiv"],
 };
 
+export const EXCLUDED_R11_STARTER_RELICS = new Set(["cracked_core"]);
+
+export const CHARACTER_SYNERGY_KEYWORDS: Record<string, Set<string>> = {
+  ironclad: new Set([
+    "Strength",
+    "Vulnerable",
+    "Exhaust",
+    "Self_Damage",
+    "Block_Scaling",
+    "Draw",
+    "Energy",
+    "Innate",
+  ]),
+  silent: new Set([
+    "Poison",
+    "Shiv",
+    "Sly",
+    "Weak",
+    "Dexterity",
+    "Draw",
+    "Energy",
+    "Retain",
+    "Innate",
+  ]),
+  defect: new Set([
+    "Channel",
+    "Focus",
+    "Lightning",
+    "Frost",
+    "Dark",
+    "Plasma",
+    "Glass",
+    "Zero_Cost",
+    "Self_Status",
+    "Draw",
+    "Energy",
+    "Innate",
+  ]),
+  necrobinder: new Set([
+    "Osty",
+    "Doom",
+    "Soul",
+    "Ethereal",
+    "Retain",
+    "Draw",
+    "Energy",
+    "Innate",
+  ]),
+  regent: new Set([
+    "Stars",
+    "Forge",
+    "Creation",
+    "Draw",
+    "Energy",
+    "Retain",
+    "Innate",
+  ]),
+};
+
 function extractRelicKeywordsFromRelic(relic: Relic): string[] {
-  const kws = new Set<string>();
   const cid = relic.codex_id.toLowerCase();
+  if (EXCLUDED_R11_STARTER_RELICS.has(cid)) {
+    return [];
+  }
+  const kws = new Set<string>();
   if (RELIC_KEYWORDS_MAP[cid]) {
     RELIC_KEYWORDS_MAP[cid].forEach((k) => kws.add(k));
   }
@@ -228,13 +293,15 @@ function extractRelicKeywordsFromRelic(relic: Relic): string[] {
     ["Frost", /\bfrost\b/],
     ["Dark", /\bdark\b/],
     ["Plasma", /\bplasma\b/],
+    ["Glass", /\bglass\b/],
     ["Focus", /\bfocus\b/],
     ["Osty", /\bosty\b|\bsummon(?:ed|s)?\b/],
     ["Doom", /\bdoom\b/],
-    ["Forge", /\bforge\b/],
+    ["Forge", /\bforge\b|\bsovereign\s+blade\b/],
     ["Soul", /\bsouls?\b/],
     ["Thorns", /\bthorns\b/],
     ["Vigor", /\bvigor\b/],
+    ["Innate", /\binnate\b|\bfirst\s+card\s+you\s+play\s+each\s+combat\b/],
     ["Draw", /\bdraw\s+(?:\d+|a|an)\s+(?:additional\s+)?cards?\b/],
     ["Block_Scaling", /block persists|doubles? block|gain \d+ block|start each combat with \d+ block/],
   ];
@@ -244,10 +311,22 @@ function extractRelicKeywordsFromRelic(relic: Relic): string[] {
   return Array.from(kws);
 }
 
-function calculateKeywordOverlap(cardKeywords: string[], deckKeywords: string[]): number {
+function calculateKeywordOverlap(
+  cardKeywords: string[],
+  deckKeywords: string[],
+  character = ""
+): number {
   if (!cardKeywords.length || !deckKeywords.length) return 0.0;
-  const cardSet = new Set(cardKeywords.map((k) => k.trim().toLowerCase()).filter(Boolean));
-  const deckSet = new Set(deckKeywords.map((k) => k.trim().toLowerCase()).filter(Boolean));
+  let cardSet = new Set(cardKeywords.map((k) => k.trim().toLowerCase()).filter(Boolean));
+  let deckSet = new Set(deckKeywords.map((k) => k.trim().toLowerCase()).filter(Boolean));
+  if (character) {
+    const allowed = CHARACTER_SYNERGY_KEYWORDS[character.trim().toLowerCase()];
+    if (allowed) {
+      const allowedLower = new Set(Array.from(allowed).map((k) => k.toLowerCase()));
+      cardSet = new Set(Array.from(cardSet).filter((k) => allowedLower.has(k)));
+      deckSet = new Set(Array.from(deckSet).filter((k) => allowedLower.has(k)));
+    }
+  }
   if (!cardSet.size || !deckSet.size) return 0.0;
   let overlap = 0;
   cardSet.forEach((k) => {
@@ -262,6 +341,7 @@ export function evaluateCardRewards(
   relicsById: Map<string, Relic>
 ): RecommendationResponse {
   const {
+    character,
     current_hp,
     max_hp,
     act_level,
@@ -328,7 +408,13 @@ export function evaluateCardRewards(
     }
   }
   relicKeywords.forEach((kw) => deckKeywordsSet.add(kw));
-  const deckKeywords = Array.from(deckKeywordsSet).sort();
+  const allowedCharSet = CHARACTER_SYNERGY_KEYWORDS[(character || "").toLowerCase()];
+  const allowedCharLower = allowedCharSet
+    ? new Set(Array.from(allowedCharSet).map((k) => k.toLowerCase()))
+    : null;
+  const deckKeywords = Array.from(deckKeywordsSet)
+    .filter((k) => !allowedCharLower || allowedCharLower.has(k.toLowerCase()))
+    .sort();
   const deckKwLowerMap = new Map(deckKeywords.map((k) => [k.toLowerCase(), k]));
 
   const candidateCards = reward_card_ids.map((id) => {
@@ -357,7 +443,7 @@ export function evaluateCardRewards(
 
   const rawScores = candidateCards.map((card) => {
     const cardKws = card.keywords || [];
-    const synRatio = calculateKeywordOverlap(cardKws, deckKeywords);
+    const synRatio = calculateKeywordOverlap(cardKws, deckKeywords, character);
     const matchedKeywords = cardKws
       .map((k) => deckKwLowerMap.get(k.toLowerCase()))
       .filter((k): k is string => Boolean(k));

@@ -167,7 +167,7 @@ export function StateInputPanel({
               Kondisi Permainan &amp; Dek Sudah Siap?
             </h3>
             <p className="text-xs sm:text-sm text-amber-100/80">
-              Lanjutkan ke layar pemilihan 3 kartu hadiah untuk melihat kartu mana yang paling cocok diambil!
+              Lanjutkan ke layar pemilihan 3–4 kartu hadiah untuk melihat kartu mana yang paling cocok diambil!
             </p>
           </div>
         </div>

@@ -215,9 +215,15 @@ function RunHistoryContent() {
 
           <div>
             <h3 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-amber-200 mb-3">
-              Urutan 3 Kartu Hadiah yang Ditawarkan
+              Urutan {loadedRecord.vector_scores.rankings.length} Kartu Hadiah yang Ditawarkan
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div
+              className={`grid grid-cols-1 gap-4 ${
+                loadedRecord.vector_scores.rankings.length === 4
+                  ? "md:grid-cols-2 lg:grid-cols-4"
+                  : "md:grid-cols-3"
+              }`}
+            >
               {loadedRecord.vector_scores.rankings.map((rankItem) => {
                 const card = cardsById.get(rankItem.card_id);
                 const isWinner =
@@ -236,8 +242,8 @@ function RunHistoryContent() {
                         {isWinner && <Award className="h-3.5 w-3.5" />}
                         Pilihan #{rankItem.rank}
                       </span>
-                      <span className="text-xs font-bold text-sky-300">
-                        Skor Kekuatan: {rankItem.vector_s.toFixed(2)}
+                      <span className="text-xs font-bold text-amber-300">
+                        {rankItem.preference_percentage.toFixed(1)}% Cocok
                       </span>
                     </div>
 
