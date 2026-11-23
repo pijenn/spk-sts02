@@ -2,10 +2,39 @@
 
 import React, { useMemo, useState } from "react";
 import Image from "next/image";
-import { ArrowLeft, Eye, PlusCircle, Search, Sparkles, Trash2, X } from "lucide-react";
+import { ArrowLeft, Eye, Filter, PlusCircle, Search, Sparkles, Trash2, X } from "lucide-react";
 import { resolveAssetUrl } from "@/lib/asset-url";
-import { CHARACTER_MAP } from "@/lib/constants";
+import { CARD_COLOR_TABS, CHARACTER_MAP } from "@/lib/constants";
 import type { Card, CharacterId } from "@/lib/types";
+
+function matchesRewardCardTab(card: Card, tabId: string, character: CharacterId): boolean {
+  if (tabId === "all") return true;
+  if (tabId === "default") {
+    return (
+      card.color === character ||
+      card.color === "colorless" ||
+      card.color === "event" ||
+      card.color === "quest" ||
+      card.rarity === "Ancient" ||
+      card.rarity === "Event" ||
+      card.rarity === "Quest"
+    );
+  }
+  if (tabId === "event") {
+    return (
+      card.color === "event" ||
+      card.color === "quest" ||
+      card.color === "token" ||
+      card.rarity === "Ancient" ||
+      card.rarity === "Event" ||
+      card.rarity === "Quest"
+    );
+  }
+  if (tabId === "curse_status") {
+    return card.color === "curse" || card.color === "status";
+  }
+  return card.color === tabId;
+}
 
 interface CardRewardSelectorProps {
   character: CharacterId;
@@ -36,27 +65,32 @@ export function CardRewardSelector({
 }: CardRewardSelectorProps) {
   const [activePickerSlot, setActivePickerSlot] = useState<number | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
+  const [selectedColorTab, setSelectedColorTab] = useState<string>("default");
   const slotCount = rewardSlots.length === 4 ? 4 : 3;
-
-  const eligibleRewardCards = useMemo(() => {
-    return cards.filter(
-      (card) =>
-        card.is_rewardable === true &&
-        (card.color === character || card.color === "colorless")
-    );
-  }, [cards, character]);
 
   const filteredModalCards = useMemo(() => {
     const q = searchQuery.trim().toLowerCase();
-    if (!q) return eligibleRewardCards;
-    return eligibleRewardCards.filter(
+    // Saat pengguna mengetik kata kunci pencarian pada tab Default, cari di seluruh katalog (All Cards)
+    // sehingga kartu dari karakter lain maupun kartu non-hadiah standar (Ancient, Event, Quest, General
+    // seperti Squash, Exterminate, dan Relax) tetap muncul tanpa tersembunyi.
+    const effectiveTab =
+      selectedColorTab === "default" && q.length > 0 ? "all" : selectedColorTab;
+
+    const basePool = cards.filter((card) =>
+      matchesRewardCardTab(card, effectiveTab, character)
+    );
+
+    if (!q) return basePool;
+    return basePool.filter(
       (c) =>
         c.name.toLowerCase().includes(q) ||
         c.type.toLowerCase().includes(q) ||
         c.rarity.toLowerCase().includes(q) ||
+        c.color.toLowerCase().includes(q) ||
+        c.description.toLowerCase().includes(q) ||
         c.keywords.some((kw) => kw.toLowerCase().includes(q))
     );
-  }, [eligibleRewardCards, searchQuery]);
+  }, [cards, character, selectedColorTab, searchQuery]);
 
   const charMeta = CHARACTER_MAP[character];
 
@@ -393,20 +427,60 @@ export function CardRewardSelector({
               </div>
             </div>
 
-            <div className="relative my-3.5">
-              <Search className="pointer-events-none absolute left-3.5 top-3 h-4 w-4 text-amber-200/70" />
-              <input
-                type="text"
-                autoFocus
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Ketik nama kartu, tipe (Attack/Skill/Power), atau efek (Poison, Strength, Vulnerable)..."
-                className="w-full rounded-xl border-3 border-[#0e161b] bg-[#131e24] pl-10 pr-4 py-2.5 text-sm font-bold text-amber-100 placeholder:text-amber-100/45 focus:border-amber-400 focus:outline-none"
-              />
+            <div className="my-3 space-y-2.5">
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <span className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-200">
+                  <Filter className="h-3.5 w-3.5" />
+                  Filter Sumber Kartu (Karakter Lain, Event, Ancient, Quest &amp; All Cards):
+                </span>
+              </div>
+
+              <div className="flex flex-wrap gap-1.5">
+                <button
+                  type="button"
+                  onClick={() => setSelectedColorTab("default")}
+                  className={`rounded-xl px-2.5 py-1 text-xs font-bold transition cursor-pointer ${
+                    selectedColorTab === "default"
+                      ? "bg-amber-400 text-slate-950 shadow"
+                      : "border border-[#0e161b] bg-[#131e24] text-amber-100/80 hover:border-amber-400/50 hover:text-amber-100"
+                  }`}
+                >
+                  {charMeta.name} + Umum &amp; Event
+                </button>
+                {CARD_COLOR_TABS.map((tab) => {
+                  const active = selectedColorTab === tab.id;
+                  return (
+                    <button
+                      key={tab.id}
+                      type="button"
+                      onClick={() => setSelectedColorTab(tab.id)}
+                      className={`rounded-xl px-2.5 py-1 text-xs font-bold transition cursor-pointer ${
+                        active
+                          ? "bg-amber-400 text-slate-950 shadow"
+                          : "border border-[#0e161b] bg-[#131e24] text-amber-100/80 hover:border-amber-400/50 hover:text-amber-100"
+                      }`}
+                    >
+                      {tab.label}
+                    </button>
+                  );
+                })}
+              </div>
+
+              <div className="relative">
+                <Search className="pointer-events-none absolute left-3.5 top-3 h-4 w-4 text-amber-200/70" />
+                <input
+                  type="text"
+                  autoFocus
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Ketik nama kartu (misal: Squash, Exterminate, Relax), karakter lain, tipe, atau efek..."
+                  className="w-full rounded-xl border-3 border-[#0e161b] bg-[#131e24] pl-10 pr-4 py-2.5 text-sm font-bold text-amber-100 placeholder:text-amber-100/45 focus:border-amber-400 focus:outline-none"
+                />
+              </div>
             </div>
 
             <div className="flex-1 overflow-y-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3.5 pr-1">
-              {filteredModalCards.slice(0, 60).map((c) => {
+              {filteredModalCards.slice(0, 80).map((c) => {
                 const alreadyPicked = rewardSlots.includes(c.card_id);
                 return (
                   <button
@@ -435,8 +509,8 @@ export function CardRewardSelector({
                     <span className="mt-2 truncate w-full text-sm font-bold text-amber-100">
                       {c.name}
                     </span>
-                    <span className="text-xs text-amber-100/70">
-                      {c.rarity} • {c.type}
+                    <span className="text-xs text-amber-100/70 capitalize">
+                      {c.color} • {c.rarity} • {c.type}
                     </span>
                   </button>
                 );

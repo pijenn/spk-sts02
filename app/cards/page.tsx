@@ -58,7 +58,10 @@ export default function CardsGalleryPage() {
           if (
             card.color !== "event" &&
             card.color !== "quest" &&
-            card.color !== "token"
+            card.color !== "token" &&
+            card.rarity !== "Ancient" &&
+            card.rarity !== "Event" &&
+            card.rarity !== "Quest"
           ) {
             return false;
           }

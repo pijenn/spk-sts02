@@ -2,12 +2,42 @@
 
 import React, { useMemo, useState } from "react";
 import Image from "next/image";
-import { Eye, Plus, Search, Trash2 } from "lucide-react";
+import { Eye, Filter, Plus, Search, Trash2 } from "lucide-react";
 import { resolveAssetUrl } from "@/lib/asset-url";
+import { CARD_COLOR_TABS } from "@/lib/constants";
 import type { Card, CharacterId } from "@/lib/types";
 
-const DEFAULT_DECK_CANDIDATE_LIMIT = 12;
-const SEARCH_DECK_CANDIDATE_LIMIT = 20;
+const DEFAULT_DECK_CANDIDATE_LIMIT = 24;
+const SEARCH_DECK_CANDIDATE_LIMIT = 48;
+
+function matchesCardTab(card: Card, tabId: string, character: CharacterId): boolean {
+  if (tabId === "all") return true;
+  if (tabId === "default") {
+    return (
+      card.color === character ||
+      card.color === "colorless" ||
+      card.color === "event" ||
+      card.color === "quest" ||
+      card.color === "token" ||
+      card.color === "curse" ||
+      card.color === "status"
+    );
+  }
+  if (tabId === "event") {
+    return (
+      card.color === "event" ||
+      card.color === "quest" ||
+      card.color === "token" ||
+      card.rarity === "Ancient" ||
+      card.rarity === "Event" ||
+      card.rarity === "Quest"
+    );
+  }
+  if (tabId === "curse_status") {
+    return card.color === "curse" || card.color === "status";
+  }
+  return card.color === tabId;
+}
 
 interface DeckManagerSectionProps {
   character: CharacterId;
@@ -29,15 +59,19 @@ export function DeckManagerSection({
   onInspectCard,
 }: DeckManagerSectionProps) {
   const [deckQuery, setDeckQuery] = useState("");
+  const [selectedColorTab, setSelectedColorTab] = useState<string>("default");
 
   const filteredDeckCandidates = useMemo(() => {
     const query = deckQuery.trim().toLowerCase();
-    const eligible = cards.filter(
-      (c) =>
-        c.color === character ||
-        c.color === "colorless" ||
-        c.color === "curse" ||
-        c.color === "status"
+    // Ketika pengguna mengetik pencarian pada tab Default, perluas pencarian ke seluruh kartu (All Cards)
+    // agar kartu karakter lain maupun Ancient/Event/General (seperti Squash, Exterminate, Relax) langsung muncul.
+    const effectiveTab =
+      selectedColorTab === "default" && query.length > 0
+        ? "all"
+        : selectedColorTab;
+
+    const eligible = cards.filter((c) =>
+      matchesCardTab(c, effectiveTab, character)
     );
     if (!query) return eligible.slice(0, DEFAULT_DECK_CANDIDATE_LIMIT);
     return eligible
@@ -45,10 +79,13 @@ export function DeckManagerSection({
         (c) =>
           c.name.toLowerCase().includes(query) ||
           c.type.toLowerCase().includes(query) ||
+          c.rarity.toLowerCase().includes(query) ||
+          c.color.toLowerCase().includes(query) ||
+          c.description.toLowerCase().includes(query) ||
           c.keywords.some((kw) => kw.toLowerCase().includes(query))
       )
       .slice(0, SEARCH_DECK_CANDIDATE_LIMIT);
-  }, [cards, deckQuery, character]);
+  }, [cards, deckQuery, character, selectedColorTab]);
 
   const groupedDeck = useMemo(() => {
     const counts = new Map<string, number>();
@@ -186,13 +223,51 @@ export function DeckManagerSection({
           </p>
         )}
       </div>
-      <div className="pt-1">
-        <label
-          htmlFor="deck-card-search"
-          className="block text-xs sm:text-sm font-bold text-amber-200 mb-1.5"
-        >
-          Tambah Kartu ke Dek Saat Ini:
-        </label>
+      <div className="pt-1 space-y-2.5">
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <label
+            htmlFor="deck-card-search"
+            className="block text-xs sm:text-sm font-bold text-amber-200"
+          >
+            Tambah Kartu ke Dek Saat Ini:
+          </label>
+          <span className="inline-flex items-center gap-1 text-[11px] font-bold text-amber-200/75">
+            <Filter className="h-3 w-3" />
+            Mendukung kartu karakter lain, Event, Ancient, Quest &amp; All Cards
+          </span>
+        </div>
+
+        <div className="flex flex-wrap gap-1.5">
+          <button
+            type="button"
+            onClick={() => setSelectedColorTab("default")}
+            className={`rounded-xl px-2.5 py-1 text-xs font-bold transition cursor-pointer ${
+              selectedColorTab === "default"
+                ? "bg-amber-400 text-slate-950 shadow"
+                : "border border-[#0e161b] bg-[#131e24] text-amber-100/80 hover:border-amber-400/50 hover:text-amber-100"
+            }`}
+          >
+            Karakter &amp; Umum
+          </button>
+          {CARD_COLOR_TABS.map((tab) => {
+            const active = selectedColorTab === tab.id;
+            return (
+              <button
+                key={tab.id}
+                type="button"
+                onClick={() => setSelectedColorTab(tab.id)}
+                className={`rounded-xl px-2.5 py-1 text-xs font-bold transition cursor-pointer ${
+                  active
+                    ? "bg-amber-400 text-slate-950 shadow"
+                    : "border border-[#0e161b] bg-[#131e24] text-amber-100/80 hover:border-amber-400/50 hover:text-amber-100"
+                }`}
+              >
+                {tab.label}
+              </button>
+            );
+          })}
+        </div>
+
         <div className="relative">
           <Search className="pointer-events-none absolute left-3.5 top-3 h-4 w-4 text-amber-200/70" />
           <input
@@ -200,7 +275,7 @@ export function DeckManagerSection({
             type="text"
             value={deckQuery}
             onChange={(e) => setDeckQuery(e.target.value)}
-            placeholder="Cari nama kartu atau efek (misal: Shrug It Off, Vulnerable, Poison)..."
+            placeholder="Cari semua kartu (misal: Squash, Relax, Exterminate, Shrug It Off, Poison)..."
             className="w-full rounded-xl border-3 border-[#0e161b] bg-[#131e24] pl-10 pr-4 py-2.5 text-sm font-bold text-amber-100 placeholder:text-amber-100/45 focus:border-amber-400 focus:outline-none"
           />
         </div>
@@ -236,8 +311,8 @@ export function DeckManagerSection({
               <p className="mt-1.5 truncate w-full text-xs sm:text-sm font-bold text-amber-100">
                 {c.name}
               </p>
-              <p className="text-[11px] text-amber-100/65">
-                {c.type} • {c.rarity}
+              <p className="text-[11px] text-amber-100/65 capitalize">
+                {c.color} • {c.type} • {c.rarity}
               </p>
             </div>
 
